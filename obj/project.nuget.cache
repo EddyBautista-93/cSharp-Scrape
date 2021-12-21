@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "v9d9PaBB2mam2vnt6D40Egq3uzU7x4xAOHg7hQYnnyKE+rekU+DFa1tkzccb0k6cNn3J9fGYz72zKqfR834T8g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\bauti\\source\\repos\\cSharp-Scrape\\cSharp-Scrape.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bauti\\.nuget\\packages\\csvhelper\\27.2.1\\csvhelper.27.2.1.nupkg.sha512",
+    "C:\\Users\\bauti\\.nuget\\packages\\htmlagilitypack\\1.11.39\\htmlagilitypack.1.11.39.nupkg.sha512"
+  ],
+  "logs": []
+}
