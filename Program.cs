@@ -8,9 +8,16 @@ namespace cSharp_Scrape
 {
     class Program
     {
+        public class Row
+        {
+            public string Title { get; set; }
+
+        }
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            HtmlWeb web = new HtmlWeb();
+
+            HtmlDocument doc = web.Load("https://en.wikipedia.org/wiki/Greece");
         }
     }
 }
