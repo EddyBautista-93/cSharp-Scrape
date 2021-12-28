@@ -28,6 +28,21 @@ namespace cSharp_Scrape
             HtmlDocument doc = web.Load("https://en.wikipedia.org/wiki/Greece");
 
             // parse and select the nodes containing span.toctext
-            var HeaderNames = doc.DocumentNode.SelectNodes("//span[@class='toctext']");        }
+            var HeaderNames = doc.DocumentNode.SelectNodes("//span[@class='toctext']");
+
+            // loop through the nodes and add them to the cdv
+            var titles = new List<Row>();
+
+            foreach (var item in HeaderNames)
+            {
+                //Console.WriteLine(item.InnerText);
+                titles.Add(new Row { Title = item.InnerText });
+            }
+            using (var writer = new StreamWriter("Path for csv file")) 
+            using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+            {
+                csv.WriteRecords(titles);
+            }
+        }
     }
 }
